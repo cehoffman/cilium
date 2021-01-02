@@ -55,7 +55,6 @@ spec:
             - "--hubble-relay-server-cert-validity-duration={{ $certValiditySecondsStr }}"
             - "--hubble-relay-server-cert-secret-name=hubble-relay-server-certs"
             {{- end }}
-      hostNetwork: true
       {{- if .Values.imagePullSecrets }}
       imagePullSecrets:
       {{ toYaml .Values.imagePullSecrets | indent 6 }}
